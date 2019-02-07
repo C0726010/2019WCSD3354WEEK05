@@ -17,7 +17,17 @@ namespace _2019WCSD3354WEEK05
 
             var a = new TestQuestion2();
 
-            a.PlayingWithForLoops();
+            //a.PlayingWithForLoops();
+
+
+
+            var b = new birthday_party();
+
+            b.setupPartyList();
+
+            b.printPartyList();
+
+
 
         }
 
@@ -109,6 +119,8 @@ namespace _2019WCSD3354WEEK05
 
     }
 
+
+
     class birthday_party
 
     {
@@ -165,7 +177,29 @@ namespace _2019WCSD3354WEEK05
 
             tail = roy;
 
+        }
 
+
+
+        public string printPartyList()
+
+        {
+
+            string inviteList = "*--";
+
+            temporary = head;
+
+            while (temporary.next_dog != null)
+
+            {
+
+                inviteList += temporary.dog_name + " * --- * ";
+
+            }
+
+
+
+            return inviteList;
 
         }
 
