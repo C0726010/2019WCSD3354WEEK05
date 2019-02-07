@@ -89,6 +89,14 @@ namespace _2019WCSD3354WEEK05
 
 
 
+        public dog()
+
+        {
+
+        }
+
+
+
         public string dog_name;
 
         public string dog_breed;
@@ -120,6 +128,48 @@ namespace _2019WCSD3354WEEK05
         public dog tail;
 
         public dog temporary;
+
+
+
+        public void setupPartyList()
+
+        {
+
+            peanut = new dog("Peanut", "Bichon");
+
+            fifi = new dog("Fifi", "Poodle");
+
+            clarence = new dog("Clarence", "German Sheppard");
+
+            roy = new dog("Roy", "Beagle");
+
+
+
+            peanut.prev_dog = null;
+
+            peanut.next_dog = fifi;
+
+            fifi.prev_dog = peanut;
+
+            fifi.next_dog = clarence;
+
+            clarence.prev_dog = fifi;
+
+            clarence.next_dog = roy;
+
+            roy.prev_dog = clarence;
+
+            roy.next_dog = null;
+
+            head = peanut;
+
+            tail = roy;
+
+
+
+        }
+
+
 
     }
 
